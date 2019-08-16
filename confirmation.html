@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body onload= "myFunction()">
+
+  <h1 id="here"></h1>
+
+  <script>
+    function myFunction(){
+      var queryString= window.location.search.substr(1);
+      var res = queryString.indexOf("&");
+      var x = queryString.slice(0,res);
+      var y = x.slice(5);
+      var z = y.replace('+',' ');
+      let str = "Hey " + z + ", your information has been submitted!!"
+      document.getElementById("here").innerHTML = str;
+
+    }
+  </script>
+  </body>
+</html>
